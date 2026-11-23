@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cursor 会话
+Comment=查看并删除本机 Cursor 对话
+Exec=cursor-chat-desk
+Icon=cursor-chat-desk
+Terminal=false
+Categories=Utility;
+Keywords=Cursor;chat;会话;
+StartupNotify=true
+StartupWMClass=dev.cursorchatdesk.Desk

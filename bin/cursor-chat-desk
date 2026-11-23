@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# 从应用菜单或终端启动会话清理窗口。
+set -euo pipefail
+# 经 ~/.local/bin 符号链接启动时，BASH_SOURCE 仍指向链接本身。
+SCRIPT="$(readlink -f "${BASH_SOURCE[0]}")"
+ROOT="$(cd "$(dirname "$SCRIPT")/.." && pwd)"
+export PYTHONPATH="${ROOT}/src${PYTHONPATH:+:${PYTHONPATH}}"
+exec python3 -m cursor_chat_desk "$@"
